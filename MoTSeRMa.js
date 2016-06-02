@@ -6,7 +6,9 @@ var rtuMaster = new RTUMaster({
     portSetup:{
         baudrate: 9600
     }}, function(){
-    var tcpServer = new TCPServer({}, function(request, callback){
+    var tcpServer = new TCPServer({
+        port:502
+    }, function(request, callback){
         rtuMaster.request(request, callback);
     });
 });
