@@ -30,7 +30,7 @@ function TCPModbusServerRaw(options, callbackRequest) {
         });
 
         socket.on('error', function () {
-            console.log(new Date().toISOString() + socket.namePad + ' cocket error');
+            console.log(new Date().toISOString() + socket.namePad + ' socket error');
         });
 
         socket.on('timeout', function () {
